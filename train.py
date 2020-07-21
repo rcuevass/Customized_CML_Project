@@ -22,8 +22,6 @@ print('Accuracy ', acc)
 print('Depth ', depth)
 print('Number of estimators ', num_estimators)
 with open("metrics.txt", 'w') as outfile:
-    #outfile.write("Accuracy: " + str(acc) + "\n")
-    #outfile.write("Depth: " + str(depth) + "\n")
     outfile.writelines(["Accuracy: " + str(acc) + "\n",
                         "Depth: " + str(depth) + "\n",
                         "Number estimators: " + str(num_estimators) + "\n"])
