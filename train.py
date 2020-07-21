@@ -13,15 +13,20 @@ y_test = np.genfromtxt("data/test_labels.csv")
 
 # Fit a model
 depth = 10
-clf = RandomForestClassifier(max_depth=depth)
+num_estimators = 50
+clf = RandomForestClassifier(max_depth=depth, n_estimators=num_estimators)
 clf.fit(X_train, y_train)
 
 acc = clf.score(X_test, y_test)
 print('Accuracy ', acc)
 print('Depth ', depth)
+print('Number of estimators ', num_estimators)
 with open("metrics.txt", 'w') as outfile:
-    outfile.write("Accuracy: " + str(acc) + "\n")
-    outfile.write("Depth: " + str(depth) + "\n")
+    #outfile.write("Accuracy: " + str(acc) + "\n")
+    #outfile.write("Depth: " + str(depth) + "\n")
+    outfile.writelines(["Accuracy: " + str(acc) + "\n",
+                        "Depth: " + str(depth) + "\n",
+                        "Number estimators: " + str(num_estimators) + "\n"])
 
 # Plot it
 disp = plot_confusion_matrix(clf, X_test, y_test, normalize='true', cmap=plt.cm.Blues)
