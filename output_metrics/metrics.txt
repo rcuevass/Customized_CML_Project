@@ -1,3 +1,3 @@
-Accuracy: 0.948
+Accuracy: 0.956
 Depth: 10
 Number estimators: 50
