@@ -18,16 +18,14 @@ clf = RandomForestClassifier(max_depth=depth, n_estimators=num_estimators)
 clf.fit(X_train, y_train)
 
 acc = clf.score(X_test, y_test)
-print('Accuracy ', acc)
-print('Depth ', depth)
-print('Number of estimators ', num_estimators)
-with open("metrics.txt", 'w') as outfile:
-    #outfile.write("Accuracy: " + str(acc) + "\n")
-    #outfile.write("Depth: " + str(depth) + "\n")
+print('accuracy ', acc)
+print('depth ', depth)
+print('number of estimators ', num_estimators)
+with open("..\\output_metrics\\metrics.txt", 'w') as outfile:
     outfile.writelines(["Accuracy: " + str(acc) + "\n",
                         "Depth: " + str(depth) + "\n",
                         "Number estimators: " + str(num_estimators) + "\n"])
 
 # Plot it
 disp = plot_confusion_matrix(clf, X_test, y_test, normalize='true', cmap=plt.cm.Blues)
-plt.savefig('confusion_matrix.png')
+plt.savefig('..\\output_metrics\\confusion_matrix.png')
