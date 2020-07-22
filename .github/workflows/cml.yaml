@@ -15,8 +15,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           pip3 install -r requirements.txt
-          python src\train.py
+          python src\\train.py
 
-          cat output_metrics\metrics.txt >> report.md
-          cml-publish output_metrics\confusion_matrix.png --md --title 'confusion-matrix' >> report.md
+          cat output_metrics\\metrics.txt >> report.md
+          cml-publish output_metrics\\confusion_matrix.png --md --title 'confusion-matrix' >> report.md
           cml-send-comment report.md
