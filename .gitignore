@@ -1,5 +1,5 @@
 # idea
 .idea
 
-# data
-# data/*.csv
+# logs
+logs/*.py.log
