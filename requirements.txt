@@ -1,5 +1,3 @@
 setuptools
-sklearn
 matplotlib
 numpy
-logging
