@@ -14,10 +14,12 @@ jobs:
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # install requirements
           pip3 install -r requirements.txt
-          python src//classifier_numeric.py
 
-          cat output_metrics//metrics.txt >> report.md
-          cml-publish output_metrics//confusion_matrix.png --md --title 'confusion-matrix' >> report.md
-          cml-publish output_metrics//roc_curve.png --md --title 'roc-curve' >> report.md
-          cml-send-comment report.md
+          # executing and creating report for classifier
+          python src//classifier_numeric.py
+          cat output_metrics//metrics.txt >> report_classifier_numeric.md
+          cml-publish output_metrics//confusion_matrix.png --md --title 'confusion-matrix' >> report_classifier_numeric.md
+          cml-publish output_metrics//roc_curve.png --md --title 'roc-curve' >> report_classifier_numeric.md
+          cml-send-comment report_classifier_numeric.md
