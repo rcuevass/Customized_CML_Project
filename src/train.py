@@ -28,7 +28,7 @@ roc_ = plot_roc_curve(clf, X_test, y_test)
 
 plt.savefig('..\\output_metrics\\roc_curve.png')
 
-auc_val = roc_.roc_auc
+auc_val = round(roc_.roc_auc, 3)
 print('accuracy ', acc)
 print('auc ', auc_val)
 print('depth ', depth)
