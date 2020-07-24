@@ -12,7 +12,7 @@ def get_log_object():
     ch.setLevel(logging.INFO)
     ch.setFormatter(formatter)
 
-    fh = TimedRotatingFileHandler('../logs/' + os.path.basename(__file__) + '.log', when='midnight', interval=1)
+    fh = TimedRotatingFileHandler('logs/' + os.path.basename(__file__) + '.log', when='midnight', interval=1)
     fh.suffix = '%Y%m%d'
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(formatter)
