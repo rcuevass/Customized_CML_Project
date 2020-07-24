@@ -1,3 +1,4 @@
-Accuracy: 0.948
+Accuracy: 0.952
+AUC: 0.975
 Depth: 10
 Number estimators: 50
