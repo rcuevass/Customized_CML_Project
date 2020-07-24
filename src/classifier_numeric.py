@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, roc_auc_score
 import matplotlib.pyplot as plt
-from ..utils.logger import get_log_object
+from utils.logger import get_log_object
 import numpy as np
 
 # instantiate log
