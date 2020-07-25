@@ -12,6 +12,7 @@ log = get_log_object()
 log.info('Simple example for NER using spacy...')
 
 nlp = spacy.load("en_core_web_sm")
+log.info('small English NER spacy model has been loaded...')
 
 text = "When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously."
 doc = nlp(text)
