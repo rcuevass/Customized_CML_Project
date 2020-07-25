@@ -19,13 +19,14 @@ jobs:
           python -m spacy download en_core_web_sm
 
           # executing and creating report for classifier
-          python src//classifier_numeric.py
-          cat output_metrics//metrics.txt >> report_classifier_numeric.md
-          cml-publish output_metrics//confusion_matrix.png --md --title 'confusion-matrix' >> report_classifier_numeric.md
-          cml-publish output_metrics//roc_curve.png --md --title 'roc-curve' >> report_classifier_numeric.md
-          cml-send-comment report_classifier_numeric.md
+          #python src//classifier_numeric.py
+          #cat output_metrics//metrics.txt >> report_classifier_numeric.md
+          #cml-publish output_metrics//confusion_matrix.png --md --title 'confusion-matrix' >> report_classifier_numeric.md
+          #cml-publish output_metrics//roc_curve.png --md --title 'roc-curve' >> report_classifier_numeric.md
+          #cml-send-comment report_classifier_numeric.md
 
           # executing and creating report for NER spacy
           python src//ner_simple.py
           cat output_ner//raw_entities_identified.txt >> report_ner.md
           cml-publish spacy_images//ner_sentence.html --md --title 'NER visualization' >> report_ner.md
+          cml-send-comment report_ner.md
