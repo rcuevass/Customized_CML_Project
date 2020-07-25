@@ -1,5 +1,6 @@
 # idea
 .idea
-
 # logs
 logs/*.py.log
+# spacy models
+spacy_models.txt
