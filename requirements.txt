@@ -1,4 +1,5 @@
 setuptools
 sklearn
+spacy
 matplotlib
 numpy
