@@ -27,4 +27,5 @@ jobs:
 
           # executing and creating report for NER spacy
           python src//ner_simple.py
+          cat output_ner//raw_entities_identified.txt >> report_ner.md
           cml-publish spacy_images//ner_sentence.html --md --title 'NER visualization' >> report_ner.md
