@@ -19,7 +19,9 @@ doc = nlp(text)
 
 
 with open("..\\output_ner\\raw_entities_identified.txt", 'w') as outfile:
-    outfile.writelines('ENTITIES IDENTIFIED ' + "\n")
+    outfile.writelines('ENTITIES IDENTIFIED FOR TEXT' + "\n")
+    outfile.writelines(text + "\n")
+    outfile.writelines("=================================" + "\n")
     for ent in doc.ents:
         ent_whole = str(ent.text) + ' ' + str(ent.label_) + ' ' + str(ent.start_char) + ' ' + str(ent.end_char) + "\n"
         outfile.writelines(ent_whole)
