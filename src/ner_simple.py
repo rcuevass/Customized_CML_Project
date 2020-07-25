@@ -17,5 +17,5 @@ text = "When Sebastian Thrun started working on self-driving cars at Google in 2
 doc = nlp(text)
 
 html_ner = spacy.displacy.render(doc, style="ent", jupyter=False)
-output_path = Path(os.path.join("../spacy_images/", "ner_sentence.html"))
+output_path = Path(os.path.join("spacy_images/", "ner_sentence.html"))
 output_path.open('w', encoding="utf-8").write(html_ner)
