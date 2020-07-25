@@ -19,13 +19,13 @@ doc = nlp(text)
 
 
 with open("..\\output_ner\\raw_entities_identified.txt", 'w') as outfile:
+    outfile.writelines('ENTITIES IDENTIFIED ' + "\n")
     for ent in doc.ents:
         ent_whole = str(ent.text) + ' ' + str(ent.label_) + ' ' + str(ent.start_char) + ' ' + str(ent.end_char) + "\n"
         outfile.writelines(ent_whole)
 
 html_ner = spacy.displacy.render(doc, style="ent", jupyter=False)
 log.info('Generating NER image in HTML format...')
-#output_path = Path(os.path.join("..\\spacy_images", "ner_sentence.html"))
 output_path = Path(os.path.join("..\\spacy_images\\ner_sentence.html"))
 log.info('Saving HTML NER image to file...')
 output_path.open('w', encoding="utf-8").write(html_ner)
