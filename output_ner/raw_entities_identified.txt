@@ -1,4 +1,5 @@
-Entities identified 
+ENTITIES IDENTIFIED FOR 
+When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously.
 Sebastian Thrun PERSON 5 20
 Google ORG 61 67
 2007 DATE 71 75
